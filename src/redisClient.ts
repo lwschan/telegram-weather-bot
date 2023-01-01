@@ -1,8 +1,8 @@
-import { createClient } from 'redis';
+import { createClient, IRedisClient } from 'redis';
 import getEnv from './environment';
 
-const create = () => {
-  let client;
+const create = (): IRedisClient => {
+  let client: IRedisClient;
 
   const environment = getEnv();
 

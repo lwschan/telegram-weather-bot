@@ -61,7 +61,7 @@ function weatherBot() {
     } else {
       bot.sendMessage(
         message.chat.id,
-        `Use /help${environment.botUsername} for information on how to use this bot.`
+        `Use /help${environment.botUsername} for information on how to use this bot.`,
       );
     }
   }
@@ -105,7 +105,7 @@ function weatherBot() {
       if (address == null) {
         bot.sendMessage(
           message.chat.id,
-          `Please set a default location using /setlocation${environment.botUsername}.`
+          `Please set a default location using /setlocation${environment.botUsername}.`,
         );
 
         return;
