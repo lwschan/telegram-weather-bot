@@ -1,11 +1,15 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+  },
   "compilerOptions": {
     "target": "ES2022",
     "module": "ES2022",
     "sourceMap": true,
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "types": [
       "@types/node",
       "@types/node-telegram-bot-api",
