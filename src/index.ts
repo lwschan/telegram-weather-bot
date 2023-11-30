@@ -3,4 +3,4 @@ import bot from './bot';
 
 configureEnv();
 
-bot();
+await bot();
