@@ -17,4 +17,4 @@ WORKDIR /app
 COPY --from=build /source/build /source/package.json /app/
 COPY --from=build /source/node_modules /app/node_modules
 
-CMD [ "sh", "-c", "NODE_ENV=production node --es-module-specifier-resolution=node index.js" ]
+CMD [ "sh", "-c", "NODE_ENV=production node --no-warnings --loader ts-node/esm index.js" ]
