@@ -149,10 +149,7 @@ async function weatherBot() {
       await bot.sendMessage(message.chat.id, 'Unauthorized user.');
     }
 
-    const input = message.text
-      ?.replace('/wo', '')
-      .replace(`/wo${environment.botUsername}`, '')
-      .trim();
+    const input = message.text?.replace('/wo', '').replace(`${environment.botUsername}`, '').trim();
 
     if (input == null || input.length < 1) {
       await bot.sendMessage(message.chat.id, 'Please enter a location.');
@@ -193,7 +190,7 @@ async function weatherBot() {
 
     const input = message.text
       ?.replace('/setlocation', '')
-      .replace(`/setlocation${environment.botUsername}`, '')
+      .replace(`${environment.botUsername}`, '')
       .trim();
 
     if (input == null || input.length < 1) {
