@@ -19,33 +19,33 @@
   "main": "./src/index.ts",
   "scripts": {
     "build": "tsc",
-    "debug": "NODE_ENV=development TS_NODE_PROJECT=./tsconfig.json ts-node ./src/index.ts",
+    "debug": "NODE_ENV=development node --no-warnings --loader ts-node/esm ./src/index.ts",
     "prettier": "prettier --config .prettierrc.json --write \"src/**/*{.ts,.js}\"",
     "start": "NODE_ENV=production node --experimental-specifier-resolution=node ./build/index.js"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
-    "node-fetch": "^3.3.0",
-    "node-telegram-bot-api": "^0.60.0",
-    "redis": "^4.5.1",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.64.0",
+    "redis": "^4.6.11",
     "text-table": "^0.2.0"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^1.0.1",
-    "@types/node": "^18.11.18",
-    "@types/node-telegram-bot-api": "0.57.6",
-    "@types/text-table": "0.2.2",
-    "@typescript-eslint/eslint-plugin": "^5.47.1",
-    "@typescript-eslint/parser": "^5.47.1",
-    "eslint": "^8.30.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "2.8.1",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.10.1",
+    "@types/node-telegram-bot-api": "0.63.3",
+    "@types/text-table": "0.2.5",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "3.1.0",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.1.2",
-    "typescript": "^4.9.4"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.2"
   },
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@4.0.2"
 }
