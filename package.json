@@ -21,7 +21,7 @@
     "build": "tsc",
     "debug": "NODE_ENV=development node --no-warnings --loader ts-node/esm ./src/index.ts",
     "prettier": "prettier --config .prettierrc.json --write \"src/**/*{.ts,.js}\"",
-    "start": "NODE_ENV=production node --no-warnings --loader ts-node/esm ./build/index.js"
+    "start": "NODE_ENV=production node --no-warnings --loader ./scripts/loader.js ./build/index.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

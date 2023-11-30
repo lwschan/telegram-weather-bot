@@ -16,5 +16,6 @@ FROM node:20-alpine
 WORKDIR /app
 COPY --from=build /source/build /source/package.json /app/
 COPY --from=build /source/node_modules /app/node_modules
+COPY --from=build /source/scripts /app/
 
-CMD [ "sh", "-c", "NODE_ENV=production node --no-warnings --loader ts-node/esm index.js" ]
+CMD [ "sh", "-c", "NODE_ENV=production node --no-warnings --loader ./loader.js index.js" ]
